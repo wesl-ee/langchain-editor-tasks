@@ -10,6 +10,6 @@ _prompt = ChatPromptTemplate.from_messages(
         ("human", "{text}"),
     ]
 )
-_model = ChatOpenAI()
+_model = ChatOpenAI(model="gpt-3.5-turbo-instruct")
 
 chain = _prompt | _model
